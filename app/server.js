@@ -19,7 +19,7 @@ app.use(bodyParser.json({ type: application/vnd.api.json }));
 var myFriends = [{
   routeName: "Dave"
   name: "Dave"
-}, {s
+}, {
   routeName: "Ava"
   name: "Ava"
 }];
