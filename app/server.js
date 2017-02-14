@@ -12,46 +12,15 @@ var port = 8080;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: application/vnd.api.json }));
+app.use(bodyParser.json({ type: "application/vnd.api.json" }));
 
-// my friends in an array form
 
-var myFriends = [{
-  routeName: "Dave"
-  name: "Dave"
-}, {s
-  routeName: "Ava"
-  name: "Ava"
-}];
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRotes.js")(app);
 
 // get route for api/friends/
 // display json
 
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"))
-});
-
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "survey.html"))
-});
-
-if (chosen) {
-  console.log(chosen);
-
-  for (var i = 0; i < myFriends.length; i++) {
-    if (chosen === myFriends[i]);
-      res.json(myFriends[i]);
-      return;
-    }
-  }
-
-  res.json(false);
-}
-
-else {
-  res.json(myFriends);
-}
-});
 
 app.listen(PORT, function() {
   console.log("Faisal's server is up and runnin'");
