@@ -15,11 +15,14 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api.json" }));
 
 
+
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRotes.js")(app);
 
-// get route for api/friends/
-// display json
+
+
+
+
 
 
 app.listen(PORT, function() {
